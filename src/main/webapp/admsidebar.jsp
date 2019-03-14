@@ -23,31 +23,28 @@
                 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
         <style>
-        body{
-            
-        }
-    </style>
+        </style>
     </head>
     <body>
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            <div class="">
+        <nav class="sidebar">
+            <div class="myclass">
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="adminpanel.html">
                             <span data-feather="file"></span>
-                            Orders
+                            Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <span data-feather="shopping-cart"></span>
-                            Products
+                            Student Classes
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <span data-feather="users"></span>
-                            Customers
+                            Subjects
                         </a>
                     </li>
                     <li class="nav-item">
@@ -59,7 +56,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <span data-feather="layers"></span>
-                            Admin Change password
+                            Change password
                         </a>
                     </li>
                 </ul>
