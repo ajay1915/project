@@ -31,12 +31,14 @@
         }
 
         .my-row {
-            
+            border: 1px solid #666666;
+            border-collapse: collapse;
 
         }
 
         .my-col {
-            
+            border: 1px solid #666666;
+            border-collapse: collapse;
         }
 
         #r1c1 {
