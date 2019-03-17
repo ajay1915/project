@@ -1,4 +1,10 @@
 <%-- 
+    Document   : admchangepwd
+    Created on : 17 Mar, 2019, 5:09:23 PM
+    Author     : AJAY
+--%>
+
+<%-- 
     Document   : admpanel
     Created on : 14 Mar, 2019, 10:12:08 AM
     Author     : AJAY
@@ -69,7 +75,32 @@
 
             </div>
             <div class="col-10 my-col" id="r2c2">
-                
+                <h3 class="display-4">Change Password</h3><hr>
+                <form action="changepwd.jsp" class="main-form needs-validation" style="width: 300px; margin: 50px;" novalidate>
+        <div class="form-group">
+            <label for="current">Current Password</label>
+            <input type="password" name="current" id="current" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="new">New Password</label>
+            <input type="password" name="new" id="new" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm">Confirm Password</label>
+            <input type="password" name="confirm" id="confirm" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <script>
+        var form = document.querySelector('.needs-validation');
+        form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        })
+    </script>
             </div>
         </div>
     </div>

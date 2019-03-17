@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author AJAY
  */
-public class admvalidate extends HttpServlet {
+public class addstaff_db extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,23 +37,32 @@ public class admvalidate extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String uname = request.getParameter("admuname");
-        String pass = request.getParameter("admpwd");
+        String fname = request.getParameter("firstname");
+        String lname = request.getParameter("lastname");
+        String uname = request.getParameter("username");
+        String email = request.getParameter("email");
+        String phone = request.getParameter("phone");
+        String sub = request.getParameter("sub");
+        String pass = request.getParameter("password");
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/result_portal_db", "root", "");
-            PreparedStatement stmt = con.prepareStatement("select username,password from admin_login where username=? and password=?");
-            stmt.setString(1, uname);
-            stmt.setString(2, pass);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                HttpSession session = request.getSession();
-                session.setAttribute("admuname", uname);
-                RequestDispatcher rd = request.getRequestDispatcher("admpanel.jsp");
-                rd.forward(request, response);
+            PreparedStatement stmt = con.prepareStatement("insert into staff_login values (?,?,?,?,?,?,?)");
+            stmt.setString(1, fname);
+            stmt.setString(2, lname);
+            stmt.setString(3, uname);
+            stmt.setString(4, email);
+            stmt.setString(5, phone);
+            stmt.setString(6, sub);
+            stmt.setString(7, pass);
+            int row = stmt.executeUpdate();
+            if (row==1) {
+               out.print("Successfully Inserted!");
+                RequestDispatcher rd = request.getRequestDispatcher("addstaff.jsp");
+                rd.include(request, response);
             } else {
-                out.print("Sorry UserName or Password Error!");
-                RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
+                out.print("not inserted!");
+                RequestDispatcher rd = request.getRequestDispatcher("addstaff.jsp");
                 rd.include(request, response);
             }
         } catch (Exception e) {

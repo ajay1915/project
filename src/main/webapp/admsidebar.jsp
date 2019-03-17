@@ -30,31 +30,13 @@
             <div class="myclass">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="adminpanel.html">
-                            <span data-feather="file"></span>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="shopping-cart"></span>
-                            Student Classes
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="users"></span>
-                            Subjects
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="addstaff.jsp">
                             <span data-feather="bar-chart-2"></span>
                             Add Staff
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="admchangepwd.jsp">
                             <span data-feather="layers"></span>
                             Change password
                         </a>

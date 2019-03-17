@@ -139,7 +139,7 @@
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="display-4">Staff Login</h4>
+                    <h4 class="display-4">Student Login</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
@@ -180,30 +180,31 @@
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="display-4">Staff Login</h4>
+                    <h4 class="display-4">Admin Login</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
+                <form action="admvalidate">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="uname">Username</label>
-                        <input type="text" name="uname" id="uname" class="form-control" placeholder=""
+                        <input type="text" name="admuname" id="uname" class="form-control" placeholder=""
                             aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="staffpwd">Password</label>
-                        <input type="password" name="staffpwd" id="studentpwd" class="form-control" placeholder=""
+                        <input type="password" name="admpwd" id="studentpwd" class="form-control" placeholder=""
                             aria-describedby="helpId">
                     </div>
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <input type="submit" value="Login" class="btn btn-success float-left">
-
+                        <input type="submit" value="Login" class="btn btn-success float-left">
                     <button type="button" class="btn btn-danger " data-dismiss="modal">Close</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>

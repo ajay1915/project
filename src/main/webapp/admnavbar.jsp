@@ -38,7 +38,7 @@
                     <input class="form-control mr-sm-2" type="text" placeholder="Search">
                     <button class="btn btn-success" type="submit" style="margin-right: 730px;">Search</button>
                 </form>
-                <form class="form-inline my-2 my-lg-0">
+                <form class="form-inline my-2 my-lg-0" action="admlogout">
                     <input type="submit" class="btn btn-outline-danger my-2 my-sm-0" value="Logout"/>
                 </form>
             </div>

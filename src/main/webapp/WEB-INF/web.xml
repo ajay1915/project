@@ -4,9 +4,25 @@
         <servlet-name>admvalidate</servlet-name>
         <servlet-class>admvalidate</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>admlogout</servlet-name>
+        <servlet-class>admlogout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>addstaff_db</servlet-name>
+        <servlet-class>addstaff_db</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>admvalidate</servlet-name>
         <url-pattern>/admvalidate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>admlogout</servlet-name>
+        <url-pattern>/admlogout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addstaff_db</servlet-name>
+        <url-pattern>/addstaff_db</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

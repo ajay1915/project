@@ -6,11 +6,6 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +16,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author AJAY
  */
-public class admvalidate extends HttpServlet {
+public class admlogout extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,30 +30,14 @@ public class admvalidate extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-
-        String uname = request.getParameter("admuname");
-        String pass = request.getParameter("admpwd");
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/result_portal_db", "root", "");
-            PreparedStatement stmt = con.prepareStatement("select username,password from admin_login where username=? and password=?");
-            stmt.setString(1, uname);
-            stmt.setString(2, pass);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                HttpSession session = request.getSession();
-                session.setAttribute("admuname", uname);
-                RequestDispatcher rd = request.getRequestDispatcher("admpanel.jsp");
-                rd.forward(request, response);
-            } else {
-                out.print("Sorry UserName or Password Error!");
-                RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
-                rd.include(request, response);
-            }
-        } catch (Exception e) {
-            out.println(e);
-        }
+        PrintWriter out=response.getWriter();
+        
+        HttpSession session=request.getSession();  
+            session.invalidate();  
+              
+            response.sendRedirect("home.jsp");
+              
+            out.close(); 
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
