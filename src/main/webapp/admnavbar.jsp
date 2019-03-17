@@ -28,7 +28,7 @@
 
     <body>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Admin|Panel</a>
+            <a class="navbar-brand" href="#" style="margin-right: 100px;">Admin|Panel</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,10 +36,10 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <form class="form-inline" action="">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
+                    <button class="btn btn-success" type="submit" style="margin-right: 730px;">Search</button>
                 </form>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-danger my-2 my-sm-0">Logout</button>
+                    <input type="submit" class="btn btn-outline-danger my-2 my-sm-0" value="Logout"/>
                 </form>
             </div>
         </nav>

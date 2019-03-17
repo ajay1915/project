@@ -29,12 +29,12 @@
     <h4 class="display-4">Student Login</h4>
     <form method="post" action="">
         <div class="form-group">
-            <label for="">Username</label>
-            <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+            <label for="sem">Select Semester </label>
+            <input type="text" name="sem" id="sem" class="form-control" placeholder="" aria-describedby="helpId">
         </div>
         <div class="form-group">
-            <label for="studentpwd">Password</label>
-            <input type="password" name="studentpwd" id="studentpwd" class="form-control" placeholder=""
+            <label for="rollno">Roll Number</label>
+            <input type="number" name="rollno" id="rollno" class="form-control" placeholder=""
                 aria-describedby="helpId">
         </div>
         <input type="submit" value="Login" class="btn btn-primary">
