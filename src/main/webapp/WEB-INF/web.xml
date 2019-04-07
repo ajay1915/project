@@ -12,6 +12,10 @@
         <servlet-name>addstaff_db</servlet-name>
         <servlet-class>addstaff_db</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>staffvalidate</servlet-name>
+        <servlet-class>staffvalidate</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>admvalidate</servlet-name>
         <url-pattern>/admvalidate</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>addstaff_db</servlet-name>
         <url-pattern>/addstaff_db</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>staffvalidate</servlet-name>
+        <url-pattern>/staffvalidate</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

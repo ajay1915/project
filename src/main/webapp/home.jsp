@@ -110,14 +110,15 @@
                 </div>
 
                 <!-- Modal body -->
+                <form action="staffvalidate">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="">Username</label>
-                        <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                        <label for="staffuname">Username</label>
+                        <input type="text" name="staffuname" id="staffuname" class="form-control" placeholder="" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="staffpwd">Password</label>
-                        <input type="password" name="staffpwd" id="studentpwd" class="form-control" placeholder=""
+                        <input type="password" name="staffpwd" id="staffpwd" class="form-control" placeholder=""
                             aria-describedby="helpId">
                     </div>
                 </div>
@@ -128,6 +129,7 @@
 
                     <button type="button" class="btn btn-danger " data-dismiss="modal">Close</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
@@ -144,7 +146,8 @@
                 </div>
 
                 <!-- Modal body -->
-                <div class="modal-body">
+                <form action="">
+                   <div class="modal-body">
                     <div class="form-group">
                         <label for="">Select Semester</label>
                         <select class="form-control" id="sem" name="sem">
@@ -166,9 +169,9 @@
                 <!-- Modal footer -->
                 <div class="modal-footer">
                     <input type="submit" value="Login" class="btn btn-success float-left">
-
                     <button type="button" class="btn btn-danger " data-dismiss="modal">Close</button>
-                </div>
+                </div> 
+                </form>
             </div>
         </div>
     </div>
