@@ -146,17 +146,17 @@
                 </div>
 
                 <!-- Modal body -->
-                <form action="">
+                <form action="stdvalidate">
                    <div class="modal-body">
                     <div class="form-group">
                         <label for="">Select Semester</label>
                         <select class="form-control" id="sem" name="sem">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
                         </select>
                     </div>
                     <div class="form-group">

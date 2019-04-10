@@ -40,6 +40,10 @@
         <servlet-name>sem6addDB</servlet-name>
         <servlet-class>sem6addDB</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>stdvalidate</servlet-name>
+        <servlet-class>stdvalidate</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>admvalidate</servlet-name>
         <url-pattern>/admvalidate</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>sem6addDB</servlet-name>
         <url-pattern>/sem6addDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>stdvalidate</servlet-name>
+        <url-pattern>/stdvalidate</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
