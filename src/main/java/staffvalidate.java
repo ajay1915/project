@@ -55,6 +55,7 @@ public class staffvalidate extends HttpServlet {
                 RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
                 rd.include(request, response);
             }
+            stmt.close();
         } catch (Exception e) {
             out.println(e);
         }

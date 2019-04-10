@@ -9,19 +9,17 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author AJAY
  */
-public class admvalidate extends HttpServlet {
+public class sem1addDB extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,26 +35,41 @@ public class admvalidate extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String uname = request.getParameter("admuname");
-        String pass = request.getParameter("admpwd");
+        int rollno = Integer.parseInt(request.getParameter("rollno"));
+        int usit101t = Integer.parseInt(request.getParameter("usit101t"));
+        int usit101p = Integer.parseInt(request.getParameter("usit101p"));
+        int usit102t = Integer.parseInt(request.getParameter("usit102t"));
+        int usit102p = Integer.parseInt(request.getParameter("usit102p"));
+        int usit103t = Integer.parseInt(request.getParameter("usit103t"));
+        int usit103p = Integer.parseInt(request.getParameter("usit103p"));
+        int usit104t = Integer.parseInt(request.getParameter("usit104t"));
+        int usit104p = Integer.parseInt(request.getParameter("usit104p"));
+        int usit105t = Integer.parseInt(request.getParameter("usit105t"));
+        int usit105p = Integer.parseInt(request.getParameter("usit105p"));
+
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/result_portal_db", "root", "");
-            PreparedStatement stmt = con.prepareStatement("select * from admin_login where username=? and password=?");
-            stmt.setString(1, uname);
-            stmt.setString(2, pass);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                HttpSession session = request.getSession();
-                session.setAttribute("admuname", uname);
-                RequestDispatcher rd = request.getRequestDispatcher("admpanel.jsp");
-                rd.forward(request, response);
+            PreparedStatement stmt = con.prepareStatement("insert into sem1 values (?,?,?,?,?,?,?,?,?,?,?)");
+            stmt.setInt(1, rollno);
+            stmt.setInt(2, usit101t);
+            stmt.setInt(3, usit101p);
+            stmt.setInt(4, usit102t);
+            stmt.setInt(5, usit102p);
+            stmt.setInt(6, usit103t);
+            stmt.setInt(7, usit103p);
+            stmt.setInt(8, usit104t);
+            stmt.setInt(9, usit104p);
+            stmt.setInt(10, usit105t);
+            stmt.setInt(11, usit105p);
+            int row = stmt.executeUpdate();
+            if (row == 1) {
+                out.print("Successfully Inserted!");
+                
             } else {
-                out.print("Sorry UserName or Password Error!");
-                RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
-                rd.include(request, response);
+                out.print("not inserted!");
+                
             }
-            stmt.close();
         } catch (Exception e) {
             out.println(e);
         }
