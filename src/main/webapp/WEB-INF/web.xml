@@ -20,6 +20,26 @@
         <servlet-name>sem1addDB</servlet-name>
         <servlet-class>sem1addDB</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>sem2addDB</servlet-name>
+        <servlet-class>sem2addDB</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sem3addDB</servlet-name>
+        <servlet-class>sem3addDB</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sem4addDB</servlet-name>
+        <servlet-class>sem4addDB</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sem5addDB</servlet-name>
+        <servlet-class>sem5addDB</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sem6addDB</servlet-name>
+        <servlet-class>sem6addDB</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>admvalidate</servlet-name>
         <url-pattern>/admvalidate</url-pattern>
@@ -39,6 +59,26 @@
     <servlet-mapping>
         <servlet-name>sem1addDB</servlet-name>
         <url-pattern>/sem1addDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sem2addDB</servlet-name>
+        <url-pattern>/sem2addDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sem3addDB</servlet-name>
+        <url-pattern>/sem3addDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sem4addDB</servlet-name>
+        <url-pattern>/sem4addDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sem5addDB</servlet-name>
+        <url-pattern>/sem5addDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sem6addDB</servlet-name>
+        <url-pattern>/sem6addDB</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
